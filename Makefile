@@ -39,7 +39,6 @@ $(NAME): $(OBJ) $(LIBFT)
 
 $(LIBFT):
 	@$(MAKE) -C $(PATH_LIB)
-	@echo "Static Directory Created!"
 	@cp $(STATIC_LIB) ./ 
 	@echo "Static library Created!"
 
@@ -51,7 +50,7 @@ clean:
 fclean: clean
 	@$(MAKE) fclean -C $(PATH_LIB)
 	@rm -rf $(LIBFT)
-	@rm -rf static
+	@rm -rf libft.a
 
 re: fclean all
 
