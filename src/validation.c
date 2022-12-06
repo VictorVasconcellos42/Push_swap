@@ -6,8 +6,13 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/06 16:02:33 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/06 21:21:34 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int checker_valid()
+#include "../includes/push_swap.h"
+
+int checker(char c)
+
+{
+}
