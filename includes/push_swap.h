@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/06 18:31:36 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/06 20:57:09 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 typedef struct	s_stack
 
 {
-	void *content;
+	int				content;
 	struct s_stack *next;
 } t_stack ;
 
