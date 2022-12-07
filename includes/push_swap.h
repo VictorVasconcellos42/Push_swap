@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 11:58:17 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:34:05 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ typedef struct s_stack
 
 int		only_number(char **argv);
 void	error_msg(int fd);
-
+int		has_duplicate(int len, int *array);
 #endif
