@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/06 22:39:19 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 03:06:14 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,15 @@ int main(int argc, char **argv)
 
 {
 	int *array;
+	int i;
 	
-	if (argc > 3)
+	if (argc >= 3)
 	{
+		i = 0;
+		only_number(argv);
 		array = create_array(argc, argv);
+		while (--argc > 0)
+			ft_printf("%i\n", array[i++]);
 	}
 	return (0);
 }
