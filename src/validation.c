@@ -6,11 +6,19 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 03:06:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 04:19:37 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+static int ft_is_signal(char c)
+
+{
+    if (c == '-' || c == '+')
+        return (0);
+    return (1);
+}
 
 int only_number(char **array)
 
@@ -21,14 +29,14 @@ int only_number(char **array)
     i = 0;
     while (array[++i])
     {
-        j = -1;
-        while (array[i][++j])
+        j = 0;
+        if (ft_is_signal(array[i][j]) == 0)
+            j++;
+        while (array[i][j])
         {
             if (!ft_isdigit(array[i][j]))
-            {
-               ft_putendl_fd("Error", 2);
-               exit(1);
-            }
+                error_msg(2);
+            j++;
         }
     }
     return (0);
