@@ -6,11 +6,25 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 12:35:42 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 13:03:12 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int ft_isorder(int len, int *array)
+
+{
+	int i;
+
+	i = 0;
+	while (++i < len)
+		if (array[i - 1] > array[i])
+			return (0);
+	free(array);
+	error_msg(2);
+	return (0);
+}
 
 int	has_duplicate(int len, int *array)
 
