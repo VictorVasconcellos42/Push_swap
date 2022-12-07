@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 02:51:16 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 03:44:09 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct	s_stack
 	struct s_stack *next;
 } t_stack ;
 
-int	only_number(char **argv);
+int		only_number(char **argv);
+void	error_msg(int fd);
 
 # endif
