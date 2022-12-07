@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 12:09:29 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:32:38 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main(int argc, char **argv)
 		i = 0;
 		only_number(argv);
 		array = create_array(argc, argv);
+		has_duplicate(argc - 1, array);
 		while (--argc > 0)
 			ft_printf("%i\n", array[i++]);
 	}
