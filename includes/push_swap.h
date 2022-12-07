@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 03:44:09 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 11:58:17 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_stack
-
+typedef struct s_stack
 {
 	int				content;
-	struct s_stack *next;
-} t_stack ;
+	struct s_stack	*next;
+}	t_stack;
 
 int		only_number(char **argv);
 void	error_msg(int fd);
 
-# endif
+#endif

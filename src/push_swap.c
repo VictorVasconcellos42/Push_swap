@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 03:06:14 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:09:29 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	*create_array(int argc, char **argv)
 {
 	int	*array;
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	j = 1;
@@ -29,12 +29,12 @@ int	*create_array(int argc, char **argv)
 	return (array);
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 
 {
-	int *array;
-	int i;
-	
+	int	*array;
+	int	i;
+
 	if (argc >= 3)
 	{
 		i = 0;

@@ -6,15 +6,15 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 03:41:15 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 03:42:26 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/07 12:12:55 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    error_msg(int fd)
+void	error_msg(int fd)
 
 {
-    ft_putendl_fd("Error", fd);
-    exit(1);
+	ft_putendl_fd("Error", fd);
+	exit(1);
 }
