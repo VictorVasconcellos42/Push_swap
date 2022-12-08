@@ -6,11 +6,27 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 18:35:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 21:22:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/08 14:57:45 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+int	min_run(int run)
+
+{
+	int	min;
+
+    min = 0;
+	if (run < 64)
+		return (MIN_RUN);
+	while (run >= 1000)
+	{
+		min |= run & 1;
+		run >>= 1;
+	}
+	return (min + run);
+}
 
 void	insertion(int *array, int left, int right)
 
@@ -92,26 +108,32 @@ void	timsort(int len, int *array)
 	int	right;
 	int	mid;
 	int step;
+	int run;
 	
 	step = 0;
 	i = 0;
+	run = min_run(len);
 	while (i < len)
 	{
-		insertion(array, i, min((i + RUN -1), (len -1)));
+		insertion(array, i, min((i + run - 1), (len -1)));
 		step++;
-		i += RUN;
+		i += run;
 	}
-	size = RUN;
+	size = run;
 	while (size < len)
 	{
 		left = 0;
 		while (left < len)
 		{
 			mid = left + size - 1;
-			right = min((left + 2 * size - 1), (len - 1));
+			right = min((left + (2 * size) - 1), (len - 1));
 			if (mid < right)
+			{
 				merge(array, left, mid, right);
-			left += 2 * size;
+				step++;
+			}
+			left = left + 2 * size;
 		}
 	}
+	ft_printf("STEP {%i}\n", step);
 }
