@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:29:15 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/12 21:47:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,6 @@ int		min(int a, int b);
 void	insertion(int *array, int left, int right);
 void	merge(int *array, int l, int m, int r);
 void	timsort(int len, int *array);
+void	ra(t_stack	*stack, int valid);
+
 #endif
