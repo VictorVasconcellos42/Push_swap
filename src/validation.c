@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:33:45 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/12 20:44:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,11 @@ int	only_number(char **array)
 	{
 		j = 0;
 		if (ft_is_signal(array[i][j]) == 0)
+		{
+			if (!ft_isdigit(array[i][++j]))
+				error_msg(2);
 			j++;
+		}
 		while (array[i][j])
 		{
 			if (!ft_isdigit(array[i][j]))
