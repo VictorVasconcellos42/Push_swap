@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 15:47:06 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/12/07 21:26:50 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/12/12 15:50:22 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAGS	=	-Wall -Wextra -Werror -g
 
 LIBFT	=	libft.a
 
-SRC		=	src/push_swap.c src/validation.c src/utils.c src/timsort.c
+SRC		=	src/push_swap.c src/validation.c src/utils.c 
 
 OBJ		=	$(SRC:.c=.o)
 
