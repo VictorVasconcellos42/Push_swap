@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/08 15:05:55 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/12 15:50:37 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(int argc, char **argv)
 		array = create_array(argc, argv);
 		if (checker_array(argc - 1, array) == 1)
 			return (0);
-		timsort(argc - 1, array);
 		while (--argc > 0)
 			ft_printf("%i\n", array[i++]);
 	}
