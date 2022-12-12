@@ -3,40 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 14:50:11 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/12 20:33:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_isorder(int len, int *array)
+int	ft_isorder(t_stack *stack)
 
 {
 	int	i;
 
 	i = 0;
-	while (++i < len)
-		if (array[i - 1] > array[i])
+	while (++i < stack->len)
+		if (stack->a[i - 1] > stack->a[i])
 			return (0);
 	return (1);
 }
 
-int	has_duplicate(int len, int *array)
+int	has_duplicate(t_stack *stack)
 
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	while (i < len)
+	while (i < stack->len)
 	{
 		j = i + 1;
-		while (j < len)
+		while (j < stack->len)
 		{
-			if (array[i] == array[j])
+			if (stack->a[i] == stack->a[j])
 				return (1);
 			j++;
 		}
@@ -75,15 +75,15 @@ int	only_number(char **array)
 	return (0);
 }
 
-int	checker_array(int len, int *array)
+int	checker_array(t_stack *stack)
 
 {
-	if (has_duplicate(len, array) == 1)
+	if (has_duplicate(stack) == 1)
 	{
-		free(array);
+		free(stack->a);
 		error_msg(2);
 	}
-	if (ft_isorder(len, array) == 1)
+	if (ft_isorder(stack) == 1)
 		return (1);
 	return (0);
 }

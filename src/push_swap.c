@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 15:50:37 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/12 20:37:42 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	*create_array(int argc, char **argv)
 
 	i = 0;
 	j = 1;
-	array = malloc((argc - 1) * sizeof(int));
+	array = malloc((argc) * sizeof(int));
 	if (!array)
 		return (NULL);
-	while (--argc > 0)
+	while (--argc >= 0)
 		array[i++] = ft_atoi(argv[j++]);
 	return (array);
 }
@@ -32,19 +32,20 @@ int	*create_array(int argc, char **argv)
 int	main(int argc, char **argv)
 
 {
-	int	*array;
+	t_stack	stack;
 	int	i;
 
 	if (argc >= 3)
 	{
 		ft_printf("NUMBER ARGUMENTS: [%i]\n", argc - 1);
-		i = 0;
+		stack.len = argc - 1;
 		only_number(argv);
-		array = create_array(argc, argv);
-		if (checker_array(argc - 1, array) == 1)
+		stack.a = create_array(stack.len, argv);
+		if (checker_array(&stack) == 1)
 			return (0);
+		i = 0;
 		while (--argc > 0)
-			ft_printf("%i\n", array[i++]);
+			ft_printf("%i\n", stack.a[i++]);
 	}
 	return (0);
 }
