@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
+#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 15:47:06 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/12/12 15:50:22 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/12/12 21:48:44 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAGS	=	-Wall -Wextra -Werror -g
 
 LIBFT	=	libft.a
 
-SRC		=	src/push_swap.c src/validation.c src/utils.c 
+SRC		=	src/push_swap.c src/validation.c src/utils.c src/swap.c
 
 OBJ		=	$(SRC:.c=.o)
 
