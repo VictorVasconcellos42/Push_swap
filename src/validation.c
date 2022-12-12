@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:44:57 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/12 20:47:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,9 @@ int	checker_array(t_stack *stack)
 		error_msg(2);
 	}
 	if (ft_isorder(stack) == 1)
+	{
+		free(stack->a);
 		return (1);
+	}
 	return (0);
 }
