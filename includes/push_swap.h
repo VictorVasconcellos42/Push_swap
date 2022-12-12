@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:21:44 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/12 20:29:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@
 
 typedef struct s_stack
 {
-	int	*stack_a;
-	int	*stack_b;
+	int	*a;
+	int	*b;
 	int	len;
 	
 }	t_stack;
 
 int		only_number(char **argv);
 void	error_msg(int fd);
-int		has_duplicate(int len, int *array);
-int		ft_isorder(int len, int *array);
-int		checker_array(int len, int *array);
+int		has_duplicate(t_stack *stack);
+int		ft_isorder(t_stack *stack);
+int		checker_array(t_stack *stack);
 int		min(int a, int b);
 void	insertion(int *array, int left, int right);
 void	merge(int *array, int l, int m, int r);
