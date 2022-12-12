@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 15:40:47 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/12 20:21:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@
 
 typedef struct s_stack
 {
-	int				content;
-	struct s_stack	*next;
+	int	*stack_a;
+	int	*stack_b;
+	int	len;
+	
 }	t_stack;
 
 int		only_number(char **argv);
