@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 18:35:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/08 14:57:45 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/12 15:46:28 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	min_run(int run)
     min = 0;
 	if (run < 64)
 		return (MIN_RUN);
-	while (run >= 1000)
+	while (run >= 64)
 	{
 		min |= run & 1;
 		run >>= 1;
