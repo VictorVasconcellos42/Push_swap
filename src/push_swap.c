@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:37:42 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/13 01:44:02 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,23 @@ int	main(int argc, char **argv)
 	if (argc >= 3)
 	{
 		ft_printf("NUMBER ARGUMENTS: [%i]\n", argc - 1);
-		stack.len = argc - 1;
 		only_number(argv);
-		stack.a = create_array(stack.len, argv);
+		stack.len_a = argc - 1;
+		stack.a = create_array(stack.len_a, argv);
 		if (checker_array(&stack) == 1)
 			return (0);
+		init_stack_b(&stack);
 		i = 0;
-		while (--argc > 0)
+		pb(&stack, 0);
+		pb(&stack, 0);
+		sa(stack.a, 0);
+		ft_putendl_fd("----------STACK A----------", 1);
+		while (stack.a[i])
 			ft_printf("%i\n", stack.a[i++]);
+		ft_putendl_fd("----------STACK B----------", 1);
+		i = 0;
+		while (stack.b[i])
+			ft_printf("%i\n", stack.b[i++]);
 	}
 	return (0);
 }
