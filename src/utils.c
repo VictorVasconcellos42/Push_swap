@@ -6,11 +6,18 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 03:41:15 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 19:31:16 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/13 01:57:58 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	init_stack_b(t_stack *stack)
+
+{
+	stack->b = ft_calloc(sizeof(int), stack->len_a);
+	stack->len_b = 0;
+}
 
 int	min(int a, int b)
 
