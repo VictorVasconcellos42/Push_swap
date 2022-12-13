@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 13:53:21 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 20:47:16 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/13 01:58:05 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isorder(t_stack *stack)
 	int	i;
 
 	i = 0;
-	while (++i < stack->len)
+	while (++i < stack->len_a)
 		if (stack->a[i - 1] > stack->a[i])
 			return (0);
 	return (1);
@@ -31,10 +31,10 @@ int	has_duplicate(t_stack *stack)
 	int	j;
 
 	i = 0;
-	while (i < stack->len)
+	while (i < stack->len_a)
 	{
 		j = i + 1;
-		while (j < stack->len)
+		while (j < stack->len_a)
 		{
 			if (stack->a[i] == stack->a[j])
 				return (1);
