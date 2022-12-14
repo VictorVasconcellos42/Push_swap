@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/13 01:43:17 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/14 10:04:13 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void    rra(t_stack	*stack, int valid);
 void    rrb(t_stack	*stack, int valid);
 void	pa(t_stack *stack, int valid);
 void    pb(t_stack *stack, int valid);
+void    sort_three(t_stack *stack);
+
 
 
 
