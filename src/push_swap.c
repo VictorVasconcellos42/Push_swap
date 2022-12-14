@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 18:03:11 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 14:10:22 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 
 {
 	t_stack	stack;
+	int		i;
 
 	if (argc >= 3)
 	{
@@ -42,7 +43,14 @@ int	main(int argc, char **argv)
 		if (checker_array(&stack) == 1)
 			return (0);
 		init_stack_b(&stack);
-		all_sort(&stack);
+		i = -1;
+		if (stack.len_a == 3)
+			sort_three(&stack);
+		else if (stack.len_a == 5)
+		    sort_five(&stack);
+/* 		ft_putendl_fd("----------STACK A----------", 1);
+		while (++i < stack.len_a)
+			ft_printf("%i\n", stack.a[i]); */
 	}
 	return (0);
 }
