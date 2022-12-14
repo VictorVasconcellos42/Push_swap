@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 18:11:01 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 18:14:47 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 21:57:33 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	all_sort(t_stack *stack)
 	else if (stack->len_a == 3)
 		sort_three(stack);
 	else if (stack->len_a <= 5)
-		sort_five(stack); 
+		sort_five(stack);
 }

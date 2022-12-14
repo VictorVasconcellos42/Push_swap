@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:49:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 19:02:19 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 22:01:50 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	find_lowers(t_stack *stack)
 
 {
-	int min;
+	int	min;
 	int	i;
 
 	min = INT_MAX;
@@ -23,8 +23,8 @@ int	find_lowers(t_stack *stack)
 	while (i < stack->len_a)
 	{
 		if (stack->a[i] < min)
-		    min = stack->a[i];
-        i++;
+			min = stack->a[i];
+		i++;
 	}
 	return (min);
 }
@@ -33,8 +33,8 @@ void	sort_five(t_stack	*stack)
 
 {
 	int	small;
-	int i;
-	
+	int	i;
+
 	while (stack->len_a > 3)
 	{
 		small = find_lowers(stack);
