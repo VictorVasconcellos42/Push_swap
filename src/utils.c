@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 03:41:15 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/13 01:57:58 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:24:32 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	min(int a, int b)
 		return (b);
 	return (a);
 }
+
 void	error_msg(int fd)
 
 {

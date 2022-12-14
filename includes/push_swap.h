@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 10:04:13 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:43:49 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ typedef struct s_stack
 	int	*a;
 	int	*b;
 	int	len_a;
-	int	len_b;
-	
+	int	len_b;	
 }	t_stack;
 
 int		only_number(char **argv);
@@ -39,13 +38,11 @@ void	ss(t_stack *stack);
 void	sb(int *stack_b, int valid);
 void	sa(int *stack_a, int valid);
 void	ra(t_stack	*stack, int valid);
-void    rra(t_stack	*stack, int valid);
-void    rrb(t_stack	*stack, int valid);
+void	rra(t_stack	*stack, int valid);
+void	rb(t_stack	*stack, int valid);
+void	rrb(t_stack	*stack, int valid);
 void	pa(t_stack *stack, int valid);
-void    pb(t_stack *stack, int valid);
-void    sort_three(t_stack *stack);
-
-
-
-
+void	pb(t_stack *stack, int valid);
+void	sort_three(t_stack *stack);
+void	rr(t_stack	*stack);
 #endif
