@@ -6,12 +6,12 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 18:35:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/12 15:46:28 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:42:48 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
+/* 
 int	min_run(int run)
 
 {
@@ -137,3 +137,4 @@ void	timsort(int len, int *array)
 	}
 	ft_printf("STEP {%i}\n", step);
 }
+ */

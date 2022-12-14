@@ -6,11 +6,11 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:07:01 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/08 15:07:12 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 10:42:42 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bubble_sort(int len, int *array)
+/* void	bubble_sort(int len, int *array)
 
 {
 	int i;
@@ -34,4 +34,4 @@ void	bubble_sort(int len, int *array)
 		}
 	}
 	ft_printf("step: [%i]\n", step);
-}
+} */
