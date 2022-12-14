@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 13:49:17 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 18:03:24 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@ void	sort_three(t_stack *stack);
 void	rr(t_stack	*stack);
 int		find_lowers(t_stack *stack);
 void	sort_five(t_stack	*stack);
+void	all_sort(t_stack *stack);
 #endif

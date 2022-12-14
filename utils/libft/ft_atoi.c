@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:15:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/07 04:40:11 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/14 17:46:47 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ long	ft_atoi(const char *str)
 		i++;
 	while (str[i] >= 48 && str[i] <= 57)
 		num = num * 10 + (str[i++] - '0');
+	num = num * minus;
 	if (num >= -2147483648 && num <= 2147483647)
-		return (num * minus);
+		return (num);
 	error_msg(2);
 	return (0);
 }
