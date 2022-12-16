@@ -25,7 +25,8 @@ typedef struct s_stack
 	int	*a;
 	int	*b;
 	int	len_a;
-	int	len_b;	
+	int	len_b;
+	int	index;
 }	t_stack;
 
 int		only_number(char **argv);

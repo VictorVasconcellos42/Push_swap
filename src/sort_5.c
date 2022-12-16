@@ -23,7 +23,10 @@ int	find_lowers(t_stack *stack)
 	while (i < stack->len_a)
 	{
 		if (stack->a[i] < min)
+		{
 			min = stack->a[i];
+			stack->index = i;
+		}
 		i++;
 	}
 	return (min);
@@ -39,13 +42,25 @@ void	sort_five(t_stack	*stack)
 	{
 		small = find_lowers(stack);
 		i = 0;
-		if (stack->a[i] != small)
+		i++;
+		if (stack->a[0] != small)
 		{
-			while (stack->a[i] != small)
+			while (stack->index > 0)
 			{
-				if (stack->a[i] == small)
+				if (stack->a[0] == small || stack->index >= 4)
 					break ;
-				rra(stack, 0);
+				if (stack->index <= 2 && stack->index > 0)
+				{
+					ra(stack, 0);
+					stack->index--;
+				}
+				else
+				{
+					rra(stack, 0);
+					stack->index++;
+				}
+				if (stack->a[0] == small)
+					break ;
 			}
 		}
 		pb(stack, 0);
@@ -53,4 +68,6 @@ void	sort_five(t_stack	*stack)
 	sort_three(stack);
 	pa(stack, 0);
 	pa(stack, 0);
+	for (int i = 0; i < 5; i++)
+		ft_printf("STACK A: [%i]\t", stack->a[i]);
 }

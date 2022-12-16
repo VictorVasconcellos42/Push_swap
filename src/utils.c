@@ -17,6 +17,7 @@ void	init_stack_b(t_stack *stack)
 {
 	stack->b = ft_calloc(sizeof(int), stack->len_a);
 	stack->len_b = 0;
+	stack->index = 0;
 }
 
 int	min(int a, int b)
