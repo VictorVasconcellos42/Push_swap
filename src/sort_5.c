@@ -47,7 +47,7 @@ void	sort_five(t_stack	*stack)
 		{
 			while (stack->index > 0)
 			{
-				if (stack->a[0] == small || stack->index >= 4)
+				if (stack->a[0] == small || stack->index >= 5)
 					break ;
 				if (stack->index <= 2 && stack->index > 0)
 				{
