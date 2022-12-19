@@ -6,16 +6,17 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 03:41:15 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 10:24:32 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/19 19:20:53 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	init_stack_b(t_stack *stack)
+void	init_stack(t_stack *stack, char** argv)
 
 {
 	stack->b = ft_calloc(sizeof(int), stack->len_a);
+	stack->c = create_array(stack->len_a, argv);
 	stack->len_b = 0;
 	stack->index = 0;
 }

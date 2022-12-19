@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 18:15:12 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/19 19:27:13 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 		stack.a = create_array(stack.len_a, argv);
 		if (checker_array(&stack) == 1)
 			return (0);
-		init_stack_b(&stack);
+		init_stack(&stack, argv);
 		all_sort(&stack);
 	}
 	return (0);
