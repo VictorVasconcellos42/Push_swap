@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 18:15:38 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/19 19:26:45 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@
 
 typedef struct s_stack
 {
-	int	*a;
-	int	*b;
-	int	len_a;
-	int	len_b;
-	int	index;
+	int		*a;
+	int		*b;
+	int		*c;
+	int		len_a;
+	int		len_b;
+	int		index;
 }	t_stack;
 
 int		only_number(char **argv);
@@ -35,7 +36,7 @@ void	error_msg(int fd);
 int		has_duplicate(t_stack *stack);
 int		ft_isorder(t_stack *stack);
 int		checker_array(t_stack *stack);
-void	init_stack_b(t_stack *stack);
+void	init_stack(t_stack *stack, char **argv);
 int		min(int a, int b);
 void	ss(t_stack *stack);
 void	sb(int *stack_b, int valid);
@@ -51,5 +52,8 @@ void	rr(t_stack	*stack);
 int		find_lowers(t_stack *stack);
 void	sort_five(t_stack	*stack);
 void	all_sort(t_stack *stack);
+void	bubble_sort(int len, int *array);
+void	quicksort(t_stack *stack);
+
 
 #endif
