@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:49:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 22:01:50 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/19 17:54:36 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,4 @@ void	sort_five(t_stack	*stack)
 	sort_three(stack);
 	pa(stack, 0);
 	pa(stack, 0);
-	for (int i = 0; i < 5; i++)
-		ft_printf("STACK A: [%i]\t", stack->a[i]);
 }
