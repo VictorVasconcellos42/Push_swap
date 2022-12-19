@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 15:47:06 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/12/14 18:18:07 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/12/19 19:26:08 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ FLAGS	=	-Wall -Wextra -Werror -g
 LIBFT	=	libft.a
 
 SRC		=	src/push_swap.c src/validation.c src/utils.c src/operation_a.c src/operation_b.c \
-			src/sort_3.c src/operation_double.c src/sort_5.c src/all_sort.c
+			src/sort_3.c src/operation_double.c src/sort_5.c src/all_sort.c src/bubble_sort.c \
+			src/quicksort.c
 
 OBJ		=	$(SRC:.c=.o)
 
