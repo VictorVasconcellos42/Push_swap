@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:35:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 14:11:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:57:19 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	insert_index(t_stack *stack)
 		{
 			if (stack->a[i] == stack->c[j])
 			{
-				stack->a[i] = ++j;
+				stack->a[i] = j;
 				break ;
 			}
 			j++;
@@ -54,7 +54,7 @@ void	radix(t_stack *stack)
 	size = stack->len_a;
 	bubble_sort(stack->len_a, stack->c);
 	insert_index(stack);
-	while (!(ft_isorder(stack)))
+	while (ft_isorder(stack) != 1)
 	{
 		while (j < size)
 		{
@@ -69,4 +69,6 @@ void	radix(t_stack *stack)
 		i++;
 		j = 0;
 	}
+	if (stack->a[0] > stack->a[1])
+		rra(stack, 0);
 }

@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 14:12:39 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:55:49 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 # include <limits.h>
 
 # define MIN_RUN 32
-# define TRUE 1
-# define FALSE 0
 
 typedef struct s_stack
 {
