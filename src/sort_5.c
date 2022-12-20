@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:49:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 13:42:24 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:10:26 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,34 @@ int	find_lowers(t_stack *stack)
 	return (min);
 }
 
+static void	operation(char *op, t_stack *stack)
+
+{
+	if (ft_strncmp(op, "ra", 2) == 0)
+	{
+		ra(stack, 0);
+		stack->index--;
+	}
+	else if (ft_strncmp(op, "rra", 3) == 0)
+	{
+		rra(stack, 0);
+		stack->index++;
+	}
+	else if (ft_strncmp(op, "pa", 2) == 0)
+	{
+		pa(stack, 0);
+		pa(stack, 0);
+	}
+}
+
 void	sort_five(t_stack	*stack)
 
 {
 	int	small;
-	int	i;
 
 	while (stack->len_a > 3)
 	{
 		small = find_lowers(stack);
-		i = 0;
-		i++;
 		if (stack->a[0] != small)
 		{
 			while (stack->index > 0)
@@ -50,15 +67,9 @@ void	sort_five(t_stack	*stack)
 				if (stack->a[0] == small || stack->index >= 5)
 					break ;
 				if (stack->index <= 2 && stack->index > 0)
-				{
-					ra(stack, 0);
-					stack->index--;
-				}
+					operation("ra", stack);
 				else
-				{
-					rra(stack, 0);
-					stack->index++;
-				}
+					operation("rra", stack);
 				if (stack->a[0] == small)
 					break ;
 			}
@@ -66,6 +77,5 @@ void	sort_five(t_stack	*stack)
 		pb(stack, 0);
 	}
 	sort_three(stack);
-	pa(stack, 0);
-	pa(stack, 0);
+	operation("pa", stack);
 }

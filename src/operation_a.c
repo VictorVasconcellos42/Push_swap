@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:28:32 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 02:30:53 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:12:30 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	sa(int *stack_a, int valid)
 		ft_putendl_fd("sa", 1);
 }
 
-void    ra(t_stack    *stack, int valid)
+void	ra(t_stack *stack, int valid)
 
 {
-	int aux;
-	int min;
+	int	aux;
+	int	min;
 
 	min = 0;
 	aux = stack->a[0];
@@ -37,7 +37,7 @@ void    ra(t_stack    *stack, int valid)
 	stack->a[min - 1] = aux;
 	if (valid == 0)
 		ft_putendl_fd("ra", 1);
-} 
+}
 
 void	rra(t_stack	*stack, int valid)
 

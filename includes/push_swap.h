@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 13:45:36 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:12:39 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,6 @@ typedef struct s_stack
 	int		index;
 }	t_stack;
 
-int		only_number(char **argv);
-int		*create_array(int argc, char **argv);
-void	error_msg(int fd);
-int		has_duplicate(t_stack *stack);
-int		ft_isorder(t_stack *stack);
-int		checker_array(t_stack *stack);
 void	init_stack(t_stack *stack, char **argv);
 void	ss(t_stack *stack);
 void	sb(int *stack_b, int valid);
@@ -50,15 +44,16 @@ void	pa(t_stack *stack, int valid);
 void	pb(t_stack *stack, int valid);
 void	sort_three(t_stack *stack);
 void	rr(t_stack	*stack);
-int		find_lowers(t_stack *stack);
+void	error_msg(int fd);
 void	sort_five(t_stack	*stack);
 void	all_sort(t_stack *stack);
 void	bubble_sort(int len, int *array);
-int		max(int *stack, int len);
-int 	min(int *stack, int len);
+int		only_number(char **argv);
+int		*create_array(int argc, char **argv);
+int		has_duplicate(t_stack *stack);
+int		ft_isorder(t_stack *stack);
+int		checker_array(t_stack *stack);
+int		find_lowers(t_stack *stack);
 void	radix(t_stack *stack);
 void	free_all(t_stack *stack);
-
-
-
 #endif

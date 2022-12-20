@@ -6,16 +6,16 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 15:07:01 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 13:43:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:56:30 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	bubble_sort(int len, int *array)
 
 {
-	int i;
-	int j;
-	int swap;
+	int	i;
+	int	j;
+	int	swap;
 
 	i = 0;
 	while (++i < len)

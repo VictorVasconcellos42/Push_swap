@@ -6,13 +6,13 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:35:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 13:42:27 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 14:11:40 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void free_all(t_stack *stack)
+void	free_all(t_stack *stack)
 
 {
 	free(stack->a);
@@ -23,8 +23,9 @@ void free_all(t_stack *stack)
 void	insert_index(t_stack *stack)
 
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
+
 	i = 0;
 	while (i < stack->len_a)
 	{
@@ -50,7 +51,7 @@ void	radix(t_stack *stack)
 	int	size;
 
 	i = 0;
-    size = stack->len_a;
+	size = stack->len_a;
 	bubble_sort(stack->len_a, stack->c);
 	insert_index(stack);
 	while (!(ft_isorder(stack)))

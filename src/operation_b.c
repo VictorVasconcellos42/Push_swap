@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 11:09:50 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 02:39:22 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:53:30 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	sb(int *stack_b, int valid)
 		ft_putendl_fd("sb", 1);
 }
 
-void    rb(t_stack    *stack, int valid)
+void	rb(t_stack *stack, int valid)
 
 {
-	int aux;
-	int min;
+	int	aux;
+	int	min;
 
 	min = 0;
 	aux = stack->b[0];
@@ -37,7 +37,7 @@ void    rb(t_stack    *stack, int valid)
 	stack->b[min - 1] = aux;
 	if (valid == 0)
 		ft_putendl_fd("rb", 1);
-} 
+}
 
 void	rrb(t_stack	*stack, int valid)
 
