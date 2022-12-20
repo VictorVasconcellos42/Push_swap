@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:35:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 11:10:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:07:59 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void	insert_index(t_stack *stack)
 		}
 		i++;
 	}
-	for (int i = 0; i < stack->len_a; i++)
-		ft_printf("STACK A: [%i] \n", stack->a[i]);
 }
 
 void	radix(t_stack *stack)
@@ -49,26 +47,23 @@ void	radix(t_stack *stack)
 	int	j;
 	int	size;
 
-	i = 1;
+	i = 0;
     size = stack->len_a;
 	bubble_sort(stack->len_a, stack->c);
 	insert_index(stack);
-	while (ft_isorder(stack) == 0)
+	while (!(ft_isorder(stack)))
 	{
-		while (j <= size)
+		while (j < size)
 		{
-			if (!(stack->a[0] & i))
-				pb(stack, 0);
-			else
+			if ((((stack->a[0] >> i) & 1) == 1))
 				ra(stack, 0);
+			else
+				pb(stack, 0);
 			j++;
 		}
 		while (stack->len_b > 0)
 			pa(stack, 0);
-		i = i << 1;
+		i++;
 		j = 0;
 	}
-	ft_printf("--------------------------\n", stack->a[i]);
-	for (int i = 0; i < stack->len_a; i++)
-		ft_printf("STACK A: [%i] \n", stack->a[i]);
 }
