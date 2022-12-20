@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 00:28:37 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 03:55:55 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		max(int *stack, int len);
 int 	min(int *stack, int len);
 int		search_median(int *stack, int len);
 void	quick_a(t_stack *stack, int middle);
-
+void	sort_three_b(t_stack *stack);
 
 
 

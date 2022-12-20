@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 09:56:13 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 10:26:23 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 02:54:29 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,31 @@ void	sort_three(t_stack *stack)
 	{
 		rra(stack, 0);
 		sa(stack->a, 0);
+	}
+}
+
+void	sort_three_b(t_stack *stack)
+
+{
+	if (stack->b[0] > stack->b[1] && stack->b[1] < stack->b[2] \
+	&& stack->b[0] < stack->b[2])
+		sb(stack->b, 0);
+	else if (stack->b[0] < stack->b[1] && stack->b[1] > stack->b[2] \
+	&& stack->b[0] > stack->b[2])
+		rrb(stack, 0);
+	else if (stack->b[0] > stack->b[1] && stack->b[0] > stack->b[2] \
+	&& stack->b[1] < stack->b[2])
+		rb(stack, 0);
+	else if (stack->b[0] > stack->b[1] && stack->b[0] > stack->b[2] \
+	&& stack->b[1] > stack->b[2])
+	{
+		sb(stack->b, 0);
+		rrb(stack, 0);
+	}
+	else if (stack->b[0] < stack->b[1] && stack->b[1] > stack->b[2] \
+	&& stack->b[2] > stack->b[0])
+	{
+		rrb(stack, 0);
+		sb(stack->b, 0);
 	}
 }
