@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:04:41 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/19 19:27:13 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 18:07:30 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	*create_array(int argc, char **argv)
 
 	i = 0;
 	j = 1;
-	array = malloc((argc) * sizeof(int));
+	array = malloc(((argc) + 1) * sizeof(int));
 	if (!array)
 		return (NULL);
 	while (--argc >= 0)
