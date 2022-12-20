@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 15:47:06 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/12/20 05:23:56 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/12/20 06:43:49 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT	=	libft.a
 
 SRC		=	src/push_swap.c src/validation.c src/utils.c src/operation_a.c src/operation_b.c \
 			src/sort_3.c src/operation_double.c src/sort_5.c src/all_sort.c src/bubble_sort.c \
-			src/quicksort.c
+			src/radix.c
 
 OBJ		=	$(SRC:.c=.o)
 
@@ -55,7 +55,7 @@ fclean: clean
 	@rm -rf libft.a
 
 #ARG = VAR=$$(echo {1..20}$$'\n' | sort -R | tr '\n' ' ') ;
-ARG = 0 11 3 17 7 8 5 13 15 1 10 16 19 20 21
+ARG = 0 11 3 17 7 8 5 13 15 1 10 16 19 20 21 
 run: $(NAME)
 	  ./push_swap ${ARG}
 
