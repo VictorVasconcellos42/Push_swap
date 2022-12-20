@@ -6,18 +6,20 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:35:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 13:07:59 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:42:27 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-/* static int	last_number(t_stack *stack, int index)
+void free_all(t_stack *stack)
 
 {
-	return (stack->a[stack->len_a - index]);
+	free(stack->a);
+	free(stack->b);
+	free(stack->c);
 }
- */
+
 void	insert_index(t_stack *stack)
 
 {

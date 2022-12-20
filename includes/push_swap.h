@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:25:04 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 06:36:18 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:45:36 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,10 @@ int		find_lowers(t_stack *stack);
 void	sort_five(t_stack	*stack);
 void	all_sort(t_stack *stack);
 void	bubble_sort(int len, int *array);
-void	quicksort(t_stack *stack);
 int		max(int *stack, int len);
 int 	min(int *stack, int len);
-int		search_median(int *stack, int len);
-void	quick_a(t_stack *stack, int middle);
-void	sort_three_b(t_stack *stack);
 void	radix(t_stack *stack);
+void	free_all(t_stack *stack);
 
 
 

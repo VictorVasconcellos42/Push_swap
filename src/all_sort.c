@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 18:11:01 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 05:50:34 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 13:43:03 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	all_sort(t_stack *stack)
 		sort_five(stack);
 	else
 	    radix(stack);
+	free_all(stack);
 }
