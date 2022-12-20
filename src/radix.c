@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 05:35:26 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/20 16:37:40 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 17:00:12 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	radix(t_stack *stack)
 	size = stack->len_a;
 	bubble_sort(stack->len_a, stack->c);
 	insert_index(stack);
-	while (i < bytes)
+	while (ft_isorder(stack) != 1)
 	{
 		j = 0;
 		while (j < size)
@@ -83,5 +83,7 @@ void	radix(t_stack *stack)
 		while (stack->len_b > 0)
 			pa(stack, 0);
 		i++;
+		if (i == bytes)
+			break ;
 	}
 }
