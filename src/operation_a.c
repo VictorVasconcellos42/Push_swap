@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 10:28:32 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 14:12:33 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 02:30:53 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,20 @@ void	sa(int *stack_a, int valid)
 		ft_putendl_fd("sa", 1);
 }
 
-void	ra(t_stack	*stack, int valid)
+void    ra(t_stack    *stack, int valid)
 
 {
-	int	*aux_array;
-	int	i;
-	int	j;
+	int aux;
+	int min;
 
-	j = 0;
-	i = 1;
-	aux_array = (int *)malloc(sizeof(int) * stack->len_a);
-	while (j < stack->len_a - 1)
-		aux_array[j++] = stack->a[i++];
-	aux_array[j] = stack->a[0];
-	i = -1;
-	while (stack->a[++i])
-		stack->a[i] = aux_array[i];
-	free(aux_array);
+	min = 0;
+	aux = stack->a[0];
+	while (++min < stack->len_a)
+		stack->a[min - 1] = stack->a[min];
+	stack->a[min - 1] = aux;
 	if (valid == 0)
 		ft_putendl_fd("ra", 1);
-}
+} 
 
 void	rra(t_stack	*stack, int valid)
 
@@ -68,11 +62,11 @@ void	pa(t_stack *stack, int valid)
 	if (stack->len_b == 0)
 		return ;
 	i = stack->len_a + 1;
-	while (i-- > 0)
+	while (--i > 0)
 		stack->a[i] = stack->a[i - 1];
 	stack->a[0] = stack->b[0];
 	i = 0;
-	while (i++ <= stack->len_b)
+	while (i++ < stack->len_b)
 		stack->b[i - 1] = stack->b[i];
 	stack->len_a++;
 	stack->len_b--;

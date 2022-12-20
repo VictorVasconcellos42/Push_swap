@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 11:49:12 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/19 17:54:36 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/19 23:33:13 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	find_lowers(t_stack *stack)
 	int	min;
 	int	i;
 
-	min = INT_MAX;
-	i = 0;
+	min = stack->a[0];
+	i = 1;
 	while (i < stack->len_a)
 	{
 		if (stack->a[i] < min)

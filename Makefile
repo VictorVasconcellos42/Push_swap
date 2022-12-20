@@ -6,7 +6,7 @@
 #    By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 15:47:06 by vde-vasc          #+#    #+#              #
-#    Updated: 2022/12/19 19:26:08 by vde-vasc         ###   ########.fr        #
+#    Updated: 2022/12/20 00:48:00 by vde-vasc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,11 @@ fclean: clean
 	@$(MAKE) fclean -C $(PATH_LIB)
 	@rm -rf $(LIBFT)
 	@rm -rf libft.a
+
+#ARG = VAR=$$(echo {1..20}$$'\n' | sort -R | tr '\n' ' ') ;
+ARG = 4 5 7 10 0 2 16 1 3 20 18 12 8 6 15 9 19 13 11 17
+run: $(NAME)
+	  ./push_swap ${ARG}
 
 re: fclean all
 

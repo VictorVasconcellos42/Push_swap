@@ -6,7 +6,7 @@
 /*   By: vde-vasc <vde-vasc@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 11:09:50 by vde-vasc          #+#    #+#             */
-/*   Updated: 2022/12/14 10:41:05 by vde-vasc         ###   ########.fr       */
+/*   Updated: 2022/12/20 02:39:22 by vde-vasc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,20 @@ void	sb(int *stack_b, int valid)
 		ft_putendl_fd("sb", 1);
 }
 
-void	rb(t_stack	*stack, int valid)
+void    rb(t_stack    *stack, int valid)
 
 {
-	int	*aux_array;
-	int	i;
-	int	j;
+	int aux;
+	int min;
 
-	j = 0;
-	i = 1;
-	aux_array = (int *)malloc(sizeof(int) * stack->len_b);
-	while (j < stack->len_b - 1)
-		aux_array[j++] = stack->a[i++];
-	aux_array[j] = stack->b[0];
-	i = -1;
-	while (stack->b[++i])
-		stack->b[i] = aux_array[i];
-	free(aux_array);
+	min = 0;
+	aux = stack->b[0];
+	while (++min < stack->len_b)
+		stack->b[min - 1] = stack->b[min];
+	stack->b[min - 1] = aux;
 	if (valid == 0)
 		ft_putendl_fd("rb", 1);
-}
+} 
 
 void	rrb(t_stack	*stack, int valid)
 
